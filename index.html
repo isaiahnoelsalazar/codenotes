@@ -8,9 +8,17 @@
       :root {
         --gray: #DDDDDD;
       }
+      @font-face {
+          font-family: Nunito;
+          src: url(Nunito.ttf);
+      }
       * {
-        font-family: system-ui, Arial, sans-serif;
+        font-family: Nunito;
         margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
       }
       h1 {
         text-align: center;
@@ -22,9 +30,26 @@
       p {
         padding: 0 8px;
       }
-      body {
+      summary:hover, li:hover {
+        background-color: var(--gray);
+      }
+      #backtotop {
+        align-items: center;
+        background-color: var(--gray);
+        border-radius: 8px;
+        bottom: 0;
+        box-shadow: 8px 8px 16px #BBBBBB, -8px -8px 16px white;
         display: flex;
-        flex-direction: column;
+        height: 50px;
+        justify-content: center;
+        margin: 24px;
+        position: fixed;
+        right: 0;
+        width: 50px;
+      }
+      #backtotop > img {
+        height: 32px;
+        width: 32px;
       }
       #table_of_contents {
         border-bottom: solid var(--gray) 1px;
@@ -35,9 +60,6 @@
       }
       .lastitem {
         margin-left: 16px;
-      }
-      #main_page {
-        scroll-behavior: smooth;
       }
       .code_snippet {
         background-color: var(--gray);
@@ -51,6 +73,9 @@
     </style>
   </head>
   <body>
+    <a id="backtotop" href="#table_of_contents">
+      <img src="arrow_up.png" alt="arrow_up">
+    </a>
     <div id="table_of_contents">
       <h1>Table of Contents</h1>
       <details>
@@ -204,6 +229,10 @@
             </p>
           </details>
         </p>
+      </details>
+      <details>
+        <summary><a href="#Android">Android</a></summary>
+        <p></p>
       </details>
     </div>
     <div id="main_page">
@@ -835,6 +864,7 @@
         <p>}</p>
         <p>while (6 != 5);</p>
       </div>
+      <h1 id="Android">Android</h1>
     </div>
   </body>
   <script>
