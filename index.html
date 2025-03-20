@@ -262,17 +262,15 @@
                 <summary><a href="#Android-Java-Basics">Basics</a></summary>
                 <p><li class="lastitem"><a href="#Android-Java-Basics-WhatYouNeedToKnow">What you need to know</a></li></p>
                 <p><li class="lastitem"><a href="#Android-Java-Basics-Activity">Activity</a></li></p>
+                <p><li class="lastitem"><a href="#Android-Java-Basics-Intent">Intent</a></li></p>
               </details>
             </p>
-          </details>
-        </p>
-        <p>
-          <details class="subdetails">
-            <summary><a href="#Android-Kotlin">Kotlin</a></summary>
             <p>
               <details class="subdetails">
-                <summary><a href="#Android-Kotlin-Basics">Basics</a></summary>
-                <p><li class="lastitem"><a href="#Android-Kotlin-Basics-WhatYouNeedToKnow">What you need to know</a></li></p>
+                <summary><a href="#Android-Java-UI">User Interface</a></summary>
+                <p><li class="lastitem"><a href="#Android-Java-UI-Button">Button</a></li></p>
+                <p><li class="lastitem"><a href="#Android-Java-UI-TextView">TextView</a></li></p>
+                <p><li class="lastitem"><a href="#Android-Java-UI-EditText">EditText</a></li></p>
               </details>
             </p>
           </details>
@@ -928,7 +926,8 @@
         <img src="otherimgs/android_studio_emptyviews.png" alt="Android Studio Empty Views Option">
         <p>Android Studio Empty Views Option</p>
       </div>
-      <p>Do note that other versions of Android Studio may not include this option. For that scenario, we can simply pick the "No Activity" option.</p>
+      <p>Do note that other versions of Android Studio may not include this option.</p>
+      <p>For that scenario, we can simply pick the "No Activity" option.</p>
       <div class="imgcontainer">
         <img src="otherimgs/android_studio_noactivity.png" alt="Android Studio No Activity Option">
         <p>Android Studio No Activity Option</p>
@@ -1017,7 +1016,8 @@
         <img src="otherimgs/android_studio_activity1.png" alt="Android Studio Activity">
         <p>Android Studio Activity</p>
       </div>
-      <p>Every activity is composed of two (2) things. The corresponding Java and XML files.</p>
+      <p>Every activity is composed of two (2) things.</p>
+      <p>The corresponding Java and XML files.</p>
       <div class="imgcontainer">
         <img src="otherimgs/android_studio_activity2.png" alt="Android Studio Activity Composition">
         <p>Android Studio Activity Composition</p>
@@ -1032,9 +1032,72 @@
         <img src="otherimgs/android_studio_activity4.png" alt="Android Studio Activity XML">
         <p>Android Studio Activity XML</p>
       </div>
-      <h1 id="Android-Kotlin">Android (Kotlin)</h1>
-      <h2 id="Android-Kotlin-Basics">Basics</h2>
-      <p>Programming in Android using Kotlin</p>
+      <h2 id="Android-Java-Basics-Intent">Intent</h2>
+      <p>An Intent represents an action you want an activity to do.</p>
+      <p>Intents can be used to start activities.</p>
+      <p>See sample code below:</p>
+      <div class="code_snippet">
+        <p>Intent intent = new Intent(CurrentActivity.this, ActivityToStart.class);</p>
+        <p>startActivity(intent);</p>
+      </div>
+      <p>Intents can also be used to pass data to activities.</p>
+      <p>See sample code below:</p>
+      <div class="code_snippet">
+        <p>Intent intent = new Intent(CurrentActivity.this, ActivityToStart.class);</p>
+        <p>intent.putExtra("data_name", "data_value");</p>
+        <p>startActivity(intent);</p>
+      </div>
+      <p>The data sent to the other activity using "putExtra()" can be retrieved using the "getIntent()" method.</p>
+      <p>See sample code below:</p>
+      <div class="code_snippet">
+        <p>String data = getIntent().getStringExtra("data_name");</p>
+      </div>
+      <p>The method to be used in getting your data should match the type of the data you sent.</p>
+      <h2 id="Android-Java-UI">User Interface</h2>
+      <p>The XML file of an activity is where the user interface lives.</p>
+      <h2 id="Android-Java-UI-Button">Button</h2>
+      <p>A button represents a clickable element.</p>
+      <p>See sample code below:</p>
+      <div class="code_snippet">
+        <p>&lt;Button</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="wrap_content"</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:text="Sample text" /&gt;</p>
+      </div>
+      <p>The code above will look like the example below.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_ui1.png" alt="Android Studio Button">
+        <p>Android Studio Button</p>
+      </div>
+      <h2 id="Android-Java-UI-TextView">TextView</h2>
+      <p>A TextView element shows text.</p>
+      <p>See sample code below:</p>
+      <div class="code_snippet">
+        <p>&lt;TextView</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="wrap_content"</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:text="Sample text" /&gt;</p>
+      </div>
+      <p>The code above will look like the example below.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_ui2.png" alt="Android Studio TextView">
+        <p>Android Studio TextView</p>
+      </div>
+      <h2 id="Android-Java-UI-EditText">EditText</h2>
+      <p>An EditText element gives a user an area to type in.</p>
+      <p>See sample code below:</p>
+      <div class="code_snippet">
+        <p>&lt;EditText</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="wrap_content"</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:hint="Sample text" /&gt;</p>
+      </div>
+      <p>A hint acts as a placeholder to give a user some context about an element.</p>
+      <p>The code above will look like the example below.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_ui3.png" alt="Android Studio EditText">
+        <p>Android Studio EditText</p>
+      </div>
     </div>
   </body>
   <script>
