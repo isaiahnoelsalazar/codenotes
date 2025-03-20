@@ -70,6 +70,25 @@
       .code_snippet > p {
         font-family: Monospace, Monospace;
       }
+      .imgcontainer {
+        align-items: center;
+        background-color: var(--gray);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: center;
+        margin: 8px;
+        padding: 16px 0;
+      }
+      .imgcontainer > img {
+        width: 540px;
+      }
+      @media (max-width: 600px){
+        .imgcontainer > img {
+          width: 95%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -232,7 +251,29 @@
       </details>
       <details>
         <summary><a href="#Android">Android</a></summary>
-        <p></p>
+        <p>
+          <details class="subdetails">
+            <summary><a href="#Android-Java">Java</a></summary>
+            <p>
+              <details class="subdetails">
+                <summary><a href="#Android-Java-Basics">Basics</a></summary>
+                <p><li class="lastitem"><a href="#Android-Java-Basics-WhatYouNeedToKnow">What you need to know</a></li></p>
+                <p><li class="lastitem"><a href="#Android-Java-Basics-Activity">Activity</a></li></p>
+              </details>
+            </p>
+          </details>
+        </p>
+        <p>
+          <details class="subdetails">
+            <summary><a href="#Android-Kotlin">Kotlin</a></summary>
+            <p>
+              <details class="subdetails">
+                <summary><a href="#Android-Kotlin-Basics">Basics</a></summary>
+                <p><li class="lastitem"><a href="#Android-Kotlin-Basics-WhatYouNeedToKnow">What you need to know</a></li></p>
+              </details>
+            </p>
+          </details>
+        </p>
       </details>
     </div>
     <div id="main_page">
@@ -864,7 +905,102 @@
         <p>}</p>
         <p>while (6 != 5);</p>
       </div>
-      <h1 id="Android">Android</h1>
+      <h1 id="Android">Android <span id="Android-Java">(Java)</span></h1>
+      <h2 id="Android-Java-Basics">Basics</h2>
+      <p>Programming in Android using Java starts with using the Android Studio IDE.</p>
+      <h2 id="Android-Java-Basics-WhatYouNeedToKnow">What you need to know</h2>
+      <p>To start creating applications for Android, we first need to create a new project.</p>
+      <p>There will be a button available at the top of the starting page of Android Studio named "New Project".</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_newprojectbutton.png" alt="Android Studio New Project Button">
+        <p>Android Studio New Project Button</p>
+      </div>
+      <p>Creating a new project in Android Studio may be confusing for some people because of the multiple options given to us at the start.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_newprojectdialog.png" alt="Android Studio New Project Dialog">
+        <p>Android Studio New Project Dialog</p>
+      </div>
+      <p>To keep things simple, we can start with the "Empty Views Activity" option</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_emptyviews.png" alt="Android Studio Empty Views Option">
+        <p>Android Studio Empty Views Option</p>
+      </div>
+      <p>Do note that other versions of Android Studio may not include this option. For that scenario, we can simply pick the "No Activity" option.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_noactivity.png" alt="Android Studio No Activity Option">
+        <p>Android Studio No Activity Option</p>
+      </div>
+      <p>After clicking next, we can then edit a few details of the project such as:</p>
+      <p>- The name</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_name.png" alt="Android Studio Project Name">
+        <p>Android Studio Project Name</p>
+      </div>
+      <p>- The package name</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_packagename.png" alt="Android Studio Project Package Name">
+        <p>Android Studio Project Package Name</p>
+      </div>
+      <p>- The save location of the project</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_savelocation.png" alt="Android Studio Project Save Location">
+        <p>Android Studio Project Save Location</p>
+      </div>
+      <p>- The programming language the project will use</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_language.png" alt="Android Studio Project Programming Language">
+        <p>Android Studio Project Programming Language</p>
+      </div>
+      <p>- The minimum Android version the project (or the application) support</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_androidversion.png" alt="Android Studio Project Android Version">
+        <p>Android Studio Project Android Version</p>
+      </div>
+      <p>- And the build configuration language of the project.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_buildconfiglanguage.png" alt="Android Studio Project Build Configuration Language">
+        <p>Android Studio Project Build Configuration Language</p>
+      </div>
+      <p>For now, we are going to be using these settings below:</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_mydefault.png" alt="Android Studio Project Settings">
+        <p>Android Studio Project Settings</p>
+      </div>
+      <p>Upon clicking the "Finish" button, you will see this window pop up.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_idestart.png" alt="Android Studio IDE">
+        <p>Android Studio IDE</p>
+      </div>
+      <p>Do note that you will need to let the IDE finish the Gradle project sync indicated near the top,</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_gradlesynctop.png" alt="Android Studio Gradle Sync at the Top">
+        <p>Android Studio Gradle Sync at the Top</p>
+      </div>
+      <p>and at the bottom of the window.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_gradlesyncbottom.png" alt="Android Studio Gradle Sync at the Bottom">
+        <p>Android Studio Gradle Sync at the Bottom</p>
+      </div>
+      <p>After the Gradle has finished syncing, this will be the final look of the IDE.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_idefinal.png" alt="Android Studio IDE Final Look">
+        <p>Android Studio IDE Final Look</p>
+      </div>
+      <p>Do note that if you chose the "No Activity" option, you will not have the default "activity_main.xml" and "MainActivity.java" files at the start.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_noactivityidefinal.png" alt="Android Studio No Activity IDE Final Look">
+        <p>Android Studio No Activity IDE Final Look</p>
+      </div>
+      <h2 id="Android-Java-Basics-Activity">Activity</h2>
+      <p>Activities in Android represents a single screen in an application.</p>
+      <p>An example of this is the "MainActivity.java" that is generated at the start of a new project.</p>
+      <div class="imgcontainer">
+        <img src="otherimgs/android_studio_newprojectbutton.png" alt="Android Studio New Project Button">
+        <p>Android Studio New Project Button</p>
+      </div>
+      <h1 id="Android-Kotlin">Android (Kotlin)</h1>
+      <h2 id="Android-Kotlin-Basics">Basics</h2>
+      <p>Programming in Android using Kotlin</p>
     </div>
   </body>
   <script>
