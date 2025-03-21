@@ -73,7 +73,38 @@
       .code_snippet > p {
         font-family: Monospace, Monospace;
       }
-      .imgcontainer {
+      .code_snippet > p > span {
+        font-family: Monospace, Monospace;
+      }
+      .code_snippet > p > .shouldbeblue {
+        color: #0033B3;
+      }
+      .code_snippet > p > .shouldbeotherblue {
+        color: #174ad4;
+      }
+      .code_snippet > p > .shouldbegreen {
+        color: #067D17;
+      }
+      .code_snippet > p > .shouldbeviolet {
+        color: #871094;
+      }
+      .code_snippet > p > .shouldbegray {
+        color: #777777;
+      }
+      .code_snippet > p > .shouldbeyellow {
+        color: #9d870d;
+      }
+      .code_snippet > p > .shouldbebluegreen {
+        color: #00627a;
+      }
+      .code_snippet > p > .shouldbevioletanditalic {
+        color: #871094;
+        font-style: italic;
+      }
+      .code_snippet > p > .shouldbeitalic {
+        font-style: italic;
+      }
+      .imgcontainer, .vidcontainer {
         align-items: center;
         background-color: var(--gray);
         border-radius: 8px;
@@ -87,11 +118,17 @@
       .imgcontainer > img {
         width: 540px;
       }
+      .vidcontainer > video {
+        width: 540px;
+      }
       #main_page {
         text-align: justify;
       }
       @media (max-width: 600px){
         .imgcontainer > img {
+          width: 95%;
+        }
+        .vidcontainer > video {
           width: 95%;
         }
       }
@@ -280,13 +317,14 @@
               <details class="subdetails">
                 <summary><a href="#Android-Java-Intermediate">Intermediate</a></summary>
                 <p><li class="lastitem"><a href="#Android-Java-Intermediate-GetText">Getting text from a widget</a></li></p>
+                <p><li class="lastitem"><a href="#Android-Java-Intermediate-EditTextSetError">Alerting a user through an EditText</a></li></p>
                 <p><li class="lastitem"><a href="#Android-Java-Intermediate-Toast">Toast</a></li></p>
+                <p><li class="lastitem"><a href="#Android-Java-Intermediate-AlertDialog">AlertDialog</a></li></p>
               </details>
             </p>
             <p>
               <details class="subdetails">
                 <summary><a href="#Android-Java-Advanced">Advanced</a></summary>
-                <p><li class="lastitem"><a href="#Android-Java-Advanced-AlertDialog">AlertDialog</a></li></p>
                 <p><li class="lastitem"><a href="#Android-Java-Advanced-HideKeyboard">Hiding a keyboard</a></li></p>
                 <p><li class="lastitem"><a href="#Android-Java-Advanced-OnKeyListener">OnKeyListener</a></li></p>
                 <p><li class="lastitem"><a href="#Android-Java-Advanced-Notification">Notification</a></li></p>
@@ -1078,10 +1116,10 @@
       <p>A button represents a clickable element.</p>
       <p>See sample code below:</p>
       <div class="code_snippet">
-        <p>&lt;Button</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="wrap_content"</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:text="Sample text" /&gt;</p>
+        <p>&lt;<span class="shouldbeblue">Button</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeviolet">android</span><span class="shouldbeblue">:</span><span class="shouldbeotherblue">layout_width</span><span class="shouldbegreen">="wrap_content"</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeviolet">android</span><span class="shouldbeblue">:</span><span class="shouldbeotherblue">layout_height</span><span class="shouldbegreen">="wrap_content"</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeviolet">android</span><span class="shouldbeblue">:</span><span class="shouldbeotherblue">text</span><span class="shouldbegreen">="Sample text"</span>/&gt;</p>
       </div>
       <p>The code above will look like the example below.</p>
       <div class="imgcontainer">
@@ -1092,10 +1130,10 @@
       <p>A TextView element shows text.</p>
       <p>See sample code below:</p>
       <div class="code_snippet">
-        <p>&lt;TextView</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="wrap_content"</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:text="Sample text" /&gt;</p>
+        <p>&lt;<span class="shouldbeblue">TextView</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeviolet">android</span><span class="shouldbeblue">:</span><span class="shouldbeotherblue">layout_width</span><span class="shouldbegreen">="wrap_content"</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeviolet">android</span><span class="shouldbeblue">:</span><span class="shouldbeotherblue">layout_height</span><span class="shouldbegreen">="wrap_content"</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeviolet">android</span><span class="shouldbeblue">:</span><span class="shouldbeotherblue">text</span><span class="shouldbegreen">="Sample text"</span>/&gt;</p>
       </div>
       <p>The code above will look like the example below.</p>
       <div class="imgcontainer">
@@ -1106,10 +1144,10 @@
       <p>An EditText element gives a user an area to type in.</p>
       <p>See sample code below:</p>
       <div class="code_snippet">
-        <p>&lt;EditText</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="wrap_content"</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;android:hint="Sample text" /&gt;</p>
+        <p>&lt;<span class="shouldbeblue">EditText</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeviolet">android</span><span class="shouldbeblue">:</span><span class="shouldbeotherblue">layout_width</span><span class="shouldbegreen">="wrap_content"</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeviolet">android</span><span class="shouldbeblue">:</span><span class="shouldbeotherblue">layout_height</span><span class="shouldbegreen">="wrap_content"</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeviolet">android</span><span class="shouldbeblue">:</span><span class="shouldbeotherblue">hint</span><span class="shouldbegreen">="Sample text"</span>/&gt;</p>
       </div>
       <p>A hint acts as a placeholder to give a user some context about an element.</p>
       <p>The code above will look like the example below.</p>
@@ -1117,6 +1155,71 @@
         <img src="otherimgs/android_studio_ui3.png" alt="Android Studio EditText">
         <p>Android Studio EditText</p>
       </div>
+      <h2 id="Android-Java-Intermediate">Intermediate</h2>
+      <p>This section will talk about a few functions available in Android.</p>
+      <h2 id="Android-Java-Intermediate-GetText">Getting text from a widget</h2>
+      <p>Getting any text or content from any widget, such as TextViews and EditTexts, is very simple.</p>
+      <p>See sample code below:</p>
+      <div class="code_snippet">
+        <p>EditText editText = findViewById(R.id.<span class="shouldbevioletanditalic">editTextId</span>);</p>
+        <p>String text = editText.getText().toString();</p>
+      </div>
+      <h2 id="Android-Java-Intermediate-EditTextSetError">Alerting a user through an EditText</h2>
+      <p>An EditText contains a "setError()" method to alert a user about an input.</p>
+      <p>See sample code below:</p>
+      <div class="code_snippet">
+        <p>EditText editText = findViewById(R.id.<span class="shouldbevioletanditalic">editTextId</span>);</p>
+        <p>editText.setOnKeyListener(<span class="shouldbegray">new View.OnKeyListener()</span> {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeyellow">@Override</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeblue">public boolean</span> <span class="shouldbebluegreen">onKey</span>(View v, <span class="shouldbeblue">int</span> keyCode, KeyEvent event) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeblue">if</span> (<span class="shouldbeviolet">editText</span>.getText().toString().contains(<span class="shouldbegreen">"1"</span>)){</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeviolet">editText</span>.setError(<span class="shouldbegreen">"Input contains the number 1!"</span>);</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="shouldbeblue">return false</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>}</p>
+      </div>
+      <p>See preview below:</p>
+      <div class="vidcontainer">
+        <video controls>
+          <source src="previews/edittextseterrorpreview.webm" type="video/webm">
+        </video>
+        <p>Android Studio EditText Set Error</p>
+      </div>
+      <h2 id="Android-Java-Intermediate-Toast">Toast</h2>
+      <p>A Toast gives a user a simple feedback about an action that is performed in the app.</p>
+      <p>See sample code below:</p>
+      <div class="code_snippet">
+        <p>Toast.<span class="shouldbeitalic">makeText</span>(<span class="shouldbeblue">this</span>, <span class="shouldbegreen">"Sample text"</span>, Toast.<span class="shouldbevioletanditalic">LENGTH_SHORT</span>).show();</p>
+      </div>
+      <p>See preview below:</p>
+      <div class="vidcontainer">
+        <video controls>
+          <source src="previews/toastpreview.webm" type="video/webm">
+        </video>
+        <p>Android Studio Toast</p>
+      </div>
+      <h2 id="Android-Java-Intermediate-AlertDialog">AlertDialog</h2>
+      <p>A dialog in general is a small window that asks the user to make a decision or enter additional information.</p>
+      <p>See sample code below:</p>
+      <div class="code_snippet">
+        <p>AlertDialog.Builder builder = <span class="shouldbeblue">new</span> AlertDialog.Builder(<span class="shouldbeblue">this</span>);</p>
+        <p>builder.setTitle(<span class="shouldbegreen">"Sample title"</span>);</p>
+        <p>builder.setMessage(<span class="shouldbegreen">"Sample text"</span>);</p>
+        <p>builder.setPositiveButton(<span class="shouldbegreen">"Done"</span>, (dialog, which) -> dialog.dismiss());</p>
+        <br>
+        <p>AlertDialog alertDialog = builder.create();</p>
+        <p>alertDialog.show();</p>
+      </div>
+      <p>See preview below:</p>
+      <div class="vidcontainer">
+        <video controls>
+          <source src="previews/alertdialogpreview.webm" type="video/webm">
+        </video>
+        <p>Android Studio AlertDialog</p>
+      </div>
+      <h2 id="#Android-Java-Advanced">Advanced</h2>
+      <p>This section will talk about more advanced functions available in Android.</p>
     </div>
   </body>
   <script>
